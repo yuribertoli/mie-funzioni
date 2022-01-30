@@ -74,7 +74,7 @@ function pari(numero) {
 
 // --------------------------------------------------PALINDROMO----------------------------------------------------------------
 
-/* Funzione per verificare se una parola o una frase sono palindrome */
+// Funzione per verificare se una parola o una frase sono palindrome
 function parolaPalindroma(parola) {
 
     let frase;
