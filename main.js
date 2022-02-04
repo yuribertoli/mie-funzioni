@@ -1,3 +1,51 @@
+//------------------------------------OPZIONI DINAMICHE DENTRO TAG SELECT DEL DOM---------------------------------------------
+
+//Creo una funzione per creare le opzioni nei tag Select
+function creaOpzioniSelectTag(arrayDiOggetti, selectTag) {
+
+    let contenuto = "";
+
+    //per ogni oggetto dell'array creo un contenuto che aggiungo alla sua variabile vuota definita sopra
+    arrayDiOggetti.forEach(elemento => {
+    
+        contenuto += `<option value="${elemento.value}">${elemento.frase}</option>`
+
+    });
+
+    //aggiungo tutti i contenuti creati dentro select
+    selectTag.innerHTML = contenuto;
+}
+
+/* RICHIEDE UN ARRAY DI OGGETTI DI QUESTO TIPO CON ALMENO QUESTI 2 VALORI */
+const opzioniSelect = [
+    {value: "all", frase: "Tutti"},
+    {value: "animal", frase: "Animali"},
+    {value: "vegetable", frase: "Verdure"},
+    {value: "user", frase: "Utenti"}    
+];
+
+//-----------------------------------------------HEX RANDOM COLORS-------------------------------------------------------------
+
+//Creo una funzione per creare colori casuali 
+function randomColor() {
+
+    //separo i caratteri scritti per formare un array
+    let caratteri = '0123456789ABCDEF'.split('');
+
+    //setto la variabile sul primo carattere che serve per definire tutti i colori
+    let color = "#";
+
+    //Ciclo per 6 volte (perchè ogni colore ha 6 caratteri)
+    for (i = 0; i < 6; i++) {
+
+        //aggiungo ogni volta il carattere prendendo il suo indice nell'array, definito da un numero casuale tra 0 e 15
+        color = color + caratteri[Math.floor(Math.random() * 16)];
+
+    }
+
+    return color;
+}
+
 //-------------------------------------------ALERT NUMERI NON CORRETTI---------------------------------------------------------
 
 //Funzione per avvertire se dei numeri inseriti non sono corretti
