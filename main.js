@@ -1,4 +1,21 @@
-//-------------------------------------------TROVA MATCH TRA 2 ARRAY---------------------------------------------
+//-------------------------------------5 NUMERI NON RIPETIBILI IN UN ARRAY--------------------------------------------------
+//Inserisci 5 numeri casuali non ripetibili in un array
+function fiveUniqueNumbers(arrayVuoto) {
+
+    for (i=0; i<5; i++) {
+
+        let numeroCasuale = randomNumber(0, 100);       //Serve la function RandomNumber
+    
+        //verifico che il numero non sia già presente tra i numeri random creati
+        while (arrayVuoto.includes(numeroCasuale)) {
+            numeroCasuale = randomNumber(0, 100);
+        } 
+        arrayVuoto.push(numeroCasuale);
+    } 
+    console.log(`I numeri dell'array sono ${arrayVuoto}`);
+}
+
+//-------------------------------------------TROVA MATCH TRA 2 ARRAY--------------------------------------------------------
 //Funzione per trovare coincidenze tra 2 array
 function trovaMatch(array1, array2) {
 
