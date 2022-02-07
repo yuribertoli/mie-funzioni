@@ -1,5 +1,21 @@
-//------------------------------------OPZIONI DINAMICHE DENTRO TAG SELECT DEL DOM---------------------------------------------
+//-------------------------------------------TROVA MATCH TRA 2 ARRAY---------------------------------------------
+//Funzione per trovare coincidenze tra 2 array
+function trovaMatch(array1, array2) {
 
+    let matches = [];
+
+    for (let i=0; i<array1.length; i++) {
+
+        for (let j=0; j<array2.length; j++) {
+
+            if (array1[i] === array2[j]) matches.push(array1[i]);
+        }
+    }
+
+    return matches;
+}
+
+//------------------------------------OPZIONI DINAMICHE DENTRO TAG SELECT DEL DOM---------------------------------------------
 //Creo una funzione per creare le opzioni nei tag Select
 function creaOpzioniSelectTag(arrayDiOggetti, selectTag) {
 
@@ -25,7 +41,6 @@ const opzioniSelect = [
 ];
 
 //-----------------------------------------------HEX RANDOM COLORS-------------------------------------------------------------
-
 //Creo una funzione per creare colori casuali 
 function randomColor() {
 
@@ -47,14 +62,12 @@ function randomColor() {
 }
 
 //-------------------------------------------ALERT NUMERI NON CORRETTI---------------------------------------------------------
-
 //Funzione per avvertire se dei numeri inseriti non sono corretti
 function erroreNumeri() {
     return alert("Il numero inserito non è corretto / I numeri inseriti non sono corretti");
 }
 
 //------------------------------------------NUMERO RANDOM TRA DUE VALORI-------------------------------------------------------
-
 //Funzione per mostrare un numero random compreso tra 2 numeri definiti in precedenza
 function randomNumber(min, max) {
 
@@ -77,7 +90,6 @@ function randomNumber(min, max) {
 }
 
 //-----------------------------------------------SOMMA DI 2 NUMERI---------------------------------------------------------------
-
 //Funzione per sommare 2 numeri 
 function sommaDueNumeri(primo, secondo) {
 
@@ -94,7 +106,6 @@ function sommaDueNumeri(primo, secondo) {
 }
 
 //-------------------------------------------------PARI O DISPARI---------------------------------------------------------------
-
 //Funzione per vedere se un numero è pari, in questo caso darà true come risultato, altrimenti sarà false
 function pari(numero) {
 
@@ -121,7 +132,6 @@ function pari(numero) {
 }
 
 // --------------------------------------------------PALINDROMO----------------------------------------------------------------
-
 // Funzione per verificare se una parola o una frase sono palindrome
 function parolaPalindroma(parola) {
 
@@ -179,7 +189,6 @@ function parolaPalindroma(parola) {
 }
 
 //-------------------------------------------CONTEGGIO PAROLE IN UNA FRASE-------------------------------------------------------
-
 //Creo una funzione per contare il numero di parole in una frase (non funziona con doppi spazi). 
 //mi servirà per sapere se l'utente sta scrivendo una parola o una frase
 function contaParole(parola) {
