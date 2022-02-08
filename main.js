@@ -206,7 +206,7 @@ function parolaPalindroma(parola) {
         ,   serve per separare i valori scelti da quelli da sostituire
         ''  serve per non inserire niente al posto dei valori selezionati
     */
-    let togliSpazi = minuscolo.replace(/ /g, '');
+    let togliSpazi = minuscolo.replace(/ /g, ''); //se avessi messo una "i" dopo "g" avrei reso la ricerca case-insensitive in caso di parole, ovvero .replace(/Ciao/gi, 'hola')
     console.log(togliSpazi);
 
     //Utilizzo .split per dividere le lettere della parola e creare un array dove ad ogni carattere corrisponde un indice, partendo da 0.
