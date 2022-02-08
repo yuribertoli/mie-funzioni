@@ -1,3 +1,32 @@
+//--------------------------------------RITORNA VALORI INTERMEZZO--------------------------------------------------
+//Funzione per ritornare i valori di un array compresi tra due numeri definiti dall'utente (numeri non compresi)
+function valoriIntermezzo(num1, num2, array) {
+
+    let nuovoArray = [];
+
+    if (num1 < num2) {
+
+        for (let i=num1; i<num2; i++) {
+            nuovoArray.push(array[i]);
+        }
+
+    } else {
+        alert("Il valore del primo numero deve essere più piccolo del secondo");
+    }
+
+    return nuovoArray;
+}
+
+//--------------------------------------GIRA STRINGA AL CONTRARIO--------------------------------------------------
+//Funzione per vedere delle strighe al contrario, come allo specchio
+function capovolgiStringa(stringa) {
+
+    let array = stringa.split("");
+    let inverti = array.reverse();
+    return inverti.join("");
+
+}
+
 //-------------------------------------5 NUMERI NON RIPETIBILI IN UN ARRAY--------------------------------------------------
 //Inserisci 5 numeri casuali non ripetibili in un array
 function fiveUniqueNumbers(arrayVuoto) {
