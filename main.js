@@ -1,3 +1,15 @@
+//---------------------------------------CAPITALIZE FIRST LETTER---------------------------------------------------
+//Funzione per rendere maiuscola solo la prima lettera di una serie di stringhe dentro un array
+function primaMaiuscola(array) {
+    let nuovoArray = []
+    for (i=0; i<array.length; i++) {
+        let minuscolo = array[i].toLowerCase(); //rendo ogni elemento minuscolo
+        let capitalized = minuscolo.charAt(0).toUpperCase() + minuscolo.slice(1); //prendo il primo elemento e lo metto maiuscolo, poi riprendo i restanti caratteri della stringa a partire dalla seconda posizione e li aggiungo
+        nuovoArray.push(capitalized);
+    }
+    return nuovoArray;
+}
+
 //--------------------------------------RITORNA VALORI INTERMEZZO--------------------------------------------------
 //Funzione per ritornare i valori di un array compresi tra due numeri definiti dall'utente (numeri non compresi)
 function valoriIntermezzo(num1, num2, array) {
