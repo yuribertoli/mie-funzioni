@@ -110,6 +110,8 @@ let x = 123;
 let y = x.toString();
 //y = "123"
 
+//in alternativa a questa funzione puoi usare join(), cosi' puoi decidere come separare i valori
+
 
 //-------------------------------------------------------------------TAGLIO DECIMALI----------------------------------------------------------------------------
 //ritorna una stringa, con il numero scritto con uno specifico numero di decimali (2 è perfetto per definire i valori monetari)
@@ -154,3 +156,10 @@ parseFloat("10.33");    // 10.33
 parseFloat("10 20 30"); // 10
 parseFloat("10 years"); // 10
 parseFloat("years 10"); // NaN
+
+
+//-----------------------------------------------------------CONVERSIONE ARRAY A STRINGA----------------------------------------------------------------------
+//converte un Array in stringa, puoi specificare il separatore da utilizzare
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let frutti = fruits.join(" / ");
+//frutti =  "Banana / Orange / Apple / Mango"
